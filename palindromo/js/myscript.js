@@ -1,39 +1,24 @@
-// utente e computer inseriscono due numeri che si sommano, in base al risultato e la scelta pari o dispari fatta dall'utente, si decreta il vincitore
+// chiedere all'utente una parola
+const inputUtente = prompt("scrivi una parola, ti dirò se è palindroma");
+// creare una funzione con la parola dell'utente come argomento per sapere se è palindroma 
+function palindroma(parola) {
+    // prendere la parola e trasformarla in un array con ogni carattere come elemento
+    let parolaDivisa = parola.split('');
+    console.log(parolaDivisa);
 
-// utente inserisce pari o dispari
-const parolaUtente = prompt("scrivi se la somma sarà pari o dispari");
-// utente inserisce un numero da 1 a 5
-const numeroUtente = parseInt(prompt("digita un numero da 1 a 5"));
-console.log(numeroUtente);
-// genero un numero random per il computer
-const numeroCPU = Math.floor(Math.random() * 5) + 1;
-console.log(numeroCPU);
+    // invertire l'ordine dell'array
+    let parolaInvertita = parolaDivisa.reverse();
+    console.log(parolaInvertita);
 
-// sommo i due numeri 
-// // function somma(num1, num2) {
-// //     return num1 + num2; 
-// // }
+    // far tornare l'array una stringa unica
+    let parolaCollegata = parolaInvertita.join('');
+    console.log(parolaCollegata);
 
-// // console.log(somma(numeroUtente, numeroCPU));
-
-// controllo se la somma è pari o dispari
-// // function tipoNumero(totale) {
-// //     return totale % 2 === 0 ? "pari" : "dispari";
-// // }
-
-// // console.log(tipoNumero(somma(numeroUtente, numeroCPU)));
-
-
-// calcolo somma e se il numero è pari o dispari
-function somma(num1, num2) {
-    let totale = num1 + num2; 
-    return totale % 2 === 0 ? "pari" : "dispari";
+    // let parolaInvertita = parola.split("").reverse().join("");
+    // console.log(parolaInvertita);
+    
+    // se la stringa inserita dall'utente è uguale a quella invertita è palindroma oppure no
+    return parola === parolaCollegata ? console.log("la parola è palindroma") : console.log("la parola non è palindroma");
 }
 
-console.log(somma(numeroUtente, numeroCPU));
-
-// dichiaro il vincitore
-
-let risultato = parolaUtente === somma(numeroUtente, numeroCPU) ? "Hai vinto" : "Hai perso";
-
-console.log(risultato);
+palindroma(inputUtente);  
