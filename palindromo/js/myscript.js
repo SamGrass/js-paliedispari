@@ -9,7 +9,11 @@ const numeroCPU = Math.floor(Math.random() * 5) + 1;
 console.log(numeroCPU);
 
 // sommo i due numeri 
+function somma(num1, num2) {
+    return num1 + num2; 
+}
 
+console.log(somma(numeroUtente, numeroCPU));
 
 // controllo se la somma è pari o dispari
 
