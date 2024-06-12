@@ -11,10 +11,10 @@ function palindroma(parola) {
     // far tornare l'array una stringa unica
     let parolaCollegata = parolaInvertita.join("");
 
-    
+    // let parolaInvertita = parola.split("").reverse().join("");
 
     // se la stringa inserita dall'utente è uguale a quella invertita è palindroma
-    
+    return parola === parolaCollegata ? "la parola è palindroma" : "la parola non è palindroma"
     // altrimenti no 
 }
 
